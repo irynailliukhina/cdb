@@ -13,7 +13,6 @@ $(document).ready(function () {
         });
     });
     $('.products-slide').slick({
-        autoplay: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
@@ -32,7 +31,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    //arrows: false,
                 }
             }
         ]
