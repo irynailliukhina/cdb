@@ -1,0 +1,179 @@
+.footer{
+    background-color: $color-white;
+    padding: 150px 0 100px 0;
+    width: 100%;
+    
+    &__wrapper{
+        max-width: 1200px;
+        padding: 0 15px;
+        margin: 0 auto;
+
+    }
+    &__name{
+        font-size: 60px;
+        text-transform: uppercase;
+        color: #6e774a;
+        text-align: center;
+        margin: 0 150px  50px 150px ;
+    }
+    &__line{
+        width: 100%;
+        height: 2px;
+        background-color: #6e774a;
+        margin: 50px 0 85px 0;
+    }
+    &-blocks{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+    &__block{
+        flex-grow: 1;
+        &--center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__hr-line{
+        width: 2px;
+        height: 55px;
+        background-color: #6e774a;
+        margin: 38px 0 24px 0;
+    }
+    &__item{
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #6e774a;
+        font-weight: 300;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        &:hover{
+            box-shadow: inset 0px 0px 20px 0px white;
+            transition-duration: 0.1s;
+            background-color: darken($color-white, $amount: 5);
+        }
+    }
+    &__subscribe{
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding-bottom: 28px;
+    }
+    &__icons{
+        display: flex;
+        margin: 0 auto;
+        a{
+            width: 30px;
+            margin: 0 25px;
+            text-align: center;
+        }
+    }
+    &__license{
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #6e774a;
+        margin: 60px auto 0 auto;
+    }
+    &__form{
+        width: 360px;
+        height: 60px;
+        position: relative;
+        &-email{
+            width: 360px;
+            height: 60px;
+            background-color: transparent;
+            border: $color-green 2px solid;
+            padding: 0 30px;
+            color: #6e774a;
+            letter-spacing: 0.28em;
+            font-size: 12px;
+            &::placeholder{
+                color: #6e774a;
+                letter-spacing: 0.28em;
+                font-size: 16px;
+            }
+            &:hover{
+                box-shadow: $bs;
+            }
+            &:focus{
+                border: $color-darkgreen 2px solid;
+            }
+        }
+        &-submit{
+            width: 85px;
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+            background-color: transparent;
+            border: none;
+            border-left: $color-green 2px solid;
+            cursor: pointer;
+            background-image: url(../img/products/right.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px 15px;
+        }
+    }
+}
+
+.fab{
+    color: #6e774a;
+    text-align: center;
+    font-size: 2em;
+    &:hover{
+         color: $color-green;       
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .footer{
+        padding: 20px 0;
+        &__hr-line{
+            display: none;
+        }
+        &-blocks{
+            flex-wrap: wrap;
+        }
+        &__block--center{
+            order: -1;
+            width: 100%;
+        }
+        &__icons{
+            margin-bottom: 20px;
+        }
+        &__line{
+            margin-bottom: 20px;
+        }
+        &__name{
+            font-size: 30px;
+            margin: 20px;
+        }
+    }
+}
+@media screen and (max-width:450px){
+    .footer{
+        &__line{
+            margin: 20px 0;
+        }
+        &__item{
+            font-size: 12px;
+            padding: 0 15px;
+            line-height: 25px;
+        }
+        &__form{
+            width: 100%;
+            &-email{
+                width: 100%;
+            }
+        }
+        &__license{
+            margin: 20px 0 0 0;
+        }
+    }
+}

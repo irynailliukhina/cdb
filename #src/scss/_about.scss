@@ -1,0 +1,194 @@
+.about{
+    background-color: $color-white;
+    padding: 100px 20px 0 20px;
+    &__wrapper{
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+.labels{ 
+    display: block;
+    margin: 0 auto 80px auto;
+    padding: 45px 70px;
+    border: 1px solid white;
+    max-width: 600px;
+    border-image-slice:14 14 14 14;
+    border-image-width:20px 20px 20px 20px;
+    border-image-outset:0px 0px 0px 0px;
+    border-image-repeat:stretch stretch;
+    border-image-source:url(../img/about/border.webp);
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        border-image:url(../img/about/border.png);
+    }
+    
+    
+    &__title{
+        font-size: 24px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin: 0px auto;
+        text-align: center;
+    }
+    &__icons{
+        margin: 25px auto 0 auto;
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px){
+    .labels{
+        padding: 20px;
+        border-image-width:10px 10px 10px 10px;
+        &__title{
+            font-size: 16px;
+        }
+    }
+}
+
+.tabs{
+
+    &-mainer{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    &__caption{
+        width: fit-content;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 70px;
+        border-bottom: 2px solid #ced6af;
+    }
+    &__caption-item{
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: $ls;
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 40px 0 40px;
+        height: 60px;
+
+        &:hover{
+            box-shadow: $bs;
+        }
+        
+        &.active{
+            border-bottom: 2px solid black;
+        }
+    }
+    &__content{
+        padding: 40px;
+        display: none;
+        &.active{
+            display: flex;
+        }
+        &-column{
+            max-width: 50%;
+            padding-top: 40px;
+            &:first-of-type{
+            padding: 75px 175px 0 0;
+        }
+        }
+        &-img{
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+    }
+    &__content-title{
+        font-size: 24px;
+        letter-spacing: $ls;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+}
+p{
+    margin-top: 40px ;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    line-height: 40px;
+    color: #6e774a;
+}
+
+@media screen and (max-width:1200px){
+    .tabs__content{
+        flex-direction: column;
+        &-column{
+            max-width: 100%;
+            padding: 20px 0;
+            &:first-of-type{
+                padding: 75px 0;
+            }
+        }
+        &-img{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:970px){
+    .tabs__content{
+        padding: 0;
+        &-column{
+            padding:  0;
+            &:first-of-type{
+                padding:20px 0;
+            }
+        }
+        &-img{
+            margin-bottom: 0;
+            &:last-of-type{
+                display: none;
+            }
+        }
+        &-title{
+            font-size: 16px;
+        }
+        p{
+            margin-top: 20px ;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 0.08em;
+            line-height: normal;
+            color: #6e774a;
+        }
+        
+    }
+    .tabs__caption-item{
+        font-size: 24px;  
+        padding: 10px 10px 0 10px;
+    }
+    .about{
+        padding: 40px 20px 0 20px;
+    }
+    .about-wrapper{
+        padding: 0;
+    }
+}
+@media screen and (max-width:661px){
+    .tabs__caption-item{
+        font-size: 16px;  
+        padding: 10px 10px 0 10px;
+        height: 30px;
+    }
+    .tabs__caption{
+        height: 40px;
+        border-bottom: 2px solid #ced6af;
+    }
+    .about{
+        padding: 20px 20px 0 20px;
+    }
+    .labels{
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:488px){
+    .tabs__caption-item{
+        font-size: 10px;  
+    }   
+}
+@media screen and (max-width:350px){
+    .tabs__caption-item{
+        font-size: 8px;  
+    }   
+}
+

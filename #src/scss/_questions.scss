@@ -1,0 +1,77 @@
+.questions{
+    background-color: $color-white;
+    padding-bottom: 150px;
+    &-title{
+        font-size: 30px;
+        letter-spacing: $ls;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 100px 0 50px 0;
+    }
+}
+.accordion{
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 10px;
+    &-title{
+        height: 75px;
+        line-height: 75px;
+        font-size: 18px;
+        letter-spacing: 0.28em;
+        color: #6e774a;
+        font-weight: 300;
+        border-top: 2px solid #eaedde;
+        padding: 0 20px 0 50px;
+        cursor: pointer;
+        position: relative;
+        &:hover{
+            box-shadow: $bs;
+        }
+        &--bottom-border {
+            border-bottom: 2px solid #eaedde;
+
+        }
+        &::before{
+            content: " ";
+            width: 20px;
+            height: 20px;
+            background-image: url(../img/cross.webp);
+            position: absolute;
+            top: 36%;
+            left: 0px;
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                background-image: url(../img/cross.png);
+             }
+        }
+    }
+    &-panel{
+        display: none; 
+        font-size: 18px;
+        letter-spacing: 0.04em;  
+        padding: 20px 0 5px 50px; 
+    }
+}
+@media screen and (max-width:1025px){
+    .questions{
+        padding-bottom: 40px;
+    }
+    .questions-title{
+        padding: 40px 20px;
+    }
+    
+}
+@media screen and (max-width:510px){
+    .accordion-title{
+        font-size: 12px;
+    }
+    .questions-title{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:400px){
+    .accordion-title{
+        font-size: 10px;
+        height: auto;
+        line-height: 30px;
+    }
+}
